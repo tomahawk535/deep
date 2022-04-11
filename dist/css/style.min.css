@@ -207,7 +207,7 @@ body._lock {
   appearance: none;
 }
 ._btn:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 main {
@@ -322,7 +322,92 @@ main {
   height: 100%;
 }
 
+.services__section {
+  display: flex;
+  color: #100C46;
+  background: linear-gradient(to right, #fff 60%, #6257FE 60%);
+  align-items: center;
+  padding: 10rem 0;
+}
+
+.services__container {
+  display: flex;
+}
+.services__container .service__text {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.services__container .service__text .service__subtitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 137%;
+  color: #6257FE;
+}
+.services__container .service__text .services__title {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 5.6rem;
+  line-height: 126%;
+  margin-bottom: 5rem;
+}
+.services__container .service__text .services__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services__container .service__text .services__list .services__item {
+  width: 50%;
+  padding-right: 4rem;
+}
+.services__container .service__text .services__list .services__item .item__icon {
+  font-size: 4rem;
+}
+.services__container .service__text .services__list .services__item .item__title {
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 135%;
+  text-align: right;
+  position: relative;
+}
+.services__container .service__text .services__list .services__item .item__title:before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 1px;
+  background-color: #100C46;
+  position: absolute;
+  top: 50%;
+}
+.services__container .service__text .services__list .services__item .item__description {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 160%;
+  color: rgba(16, 12, 70, 0.8);
+  margin: 2rem 0 2rem;
+}
+.services__container .services__image {
+  width: 45%;
+  display: flex;
+  position: relative;
+}
+.services__container .services__image .face {
+  width: 70%;
+  height: 80%;
+  align-self: center;
+}
+.services__container .services__image .phone {
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  width: 50%;
+}
+
 @media (min-width: 2000px) {
+  html {
+    font-size: 12px;
+  }
+
   ._container {
     max-width: 1700px;
   }
@@ -359,13 +444,27 @@ main {
   .about__container .about__image {
     width: 100%;
   }
+
+  .services__section {
+    background: linear-gradient(to bottom, #fff 60%, #6257FE 60%);
+  }
+
+  .services__container {
+    flex-direction: column;
+  }
+  .services__container .service__text {
+    width: 100%;
+  }
+  .services__container .services__image {
+    width: 100%;
+  }
 }
 @media (max-width: 763px) {
   .hero__container {
     margin: 7rem 1.5rem;
   }
 
-  .about__container {
+  .about__container, .services__container {
     margin: 0 1.5rem;
   }
 }
@@ -376,5 +475,21 @@ main {
 
   .about__section {
     background: linear-gradient(to bottom, #100C46 70%, #fff 70%);
+  }
+
+  .services__section {
+    background: linear-gradient(to bottom, #fff 70%, #6257FE 70%);
+  }
+
+  .services__container .service__text .services__list .services__item .item__title {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-top: 1.2rem;
+  }
+  .services__container .service__text .services__list .services__item .item__title:before {
+    display: none;
+  }
+  .services__container .service__text .services__list .services__item .item__description {
+    font-size: 1.6rem;
   }
 }
