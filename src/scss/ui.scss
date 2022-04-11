@@ -1,0 +1,15 @@
+._btn {
+  padding: 1.9rem 4.6rem;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 178%;
+  color: #100C46;
+  text-transform: capitalize;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  border-radius: .3rem;
+  transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.02);
+    }
+}

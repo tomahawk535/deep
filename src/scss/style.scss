@@ -7,7 +7,7 @@
 //<ШРИФТЫ>===============================================================================================
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Overpass:wght@700&display=swap');
 @import "fonts";
 //</Подключаем шрифты>=======================================================================================
 
@@ -16,8 +16,9 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: 'Inter', sans-serif;
-$fontSize: 16;
+$fontFamily: 'Open Sans', sans-serif;
+//font-family: 'Overpass', sans-serif;
+$fontSize: 10;
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
@@ -25,13 +26,13 @@ $fontSize: 16;
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
 $minWidth: 320px;
 $maxWidth: 1440;
-$maxWidthContainer: 1250;
+$maxWidthContainer: 1200;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-$mainColor: red;
+$mainColor: #fff;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -76,7 +77,7 @@ body {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 //@import "forms";
-//@import "ui";
+@import "ui";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -93,3 +94,106 @@ body {
 //.page {
 //  flex: 1 1 auto;
 //}
+main {
+  min-height: 100vh;
+}
+.fullscreen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero__section {
+  background-color: #6257FE;
+  background-image: url("../img/hero__img.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 55% 100%;
+  //align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .social__links {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    align-self: start;
+
+    .social__list {
+      background-color: #6257FE;
+      padding: 2.3rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      li {
+        margin-right: 2.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .social__link {
+        font-size: 2.3rem;
+        transition: all 0.5s ease-in;
+      }
+
+    }
+
+  }
+
+}
+.hero__container {
+  display: flex;
+  justify-content: start;
+  //align-self: center;
+  width: 100%;
+  .hero__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+  }
+  .hero__title {
+    font-family: 'Overpass', sans-serif;
+    font-size: 5.6rem;
+    line-height: 126%;
+    font-weight: 700;
+  }
+  .hero__description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    margin: 3rem 0;
+  }
+  .hero__btn {
+    margin-top: 3.7rem;
+  }
+}
+
+
+@media (min-width: 2000px) {
+  ._container {
+    max-width: 1700px;
+  }
+}
+@media (max-width: 992px) {
+  .fullscreen {
+    min-height: auto;
+  }
+  .hero__section {
+    background-size: cover;
+    background-position: center center;
+
+  }
+  .hero__container {
+    background-color: rgba(98,87,254, 0.9);
+    align-self: center;
+    padding: 1.6rem 1rem;
+    margin: 7rem auto;
+  }
+}
+
+@media (max-width: 763px) {
+  .hero__container {
+    margin: 7rem 1.5rem;
+  }
+}

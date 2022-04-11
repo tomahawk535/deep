@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Overpass:wght@700&display=swap");
 @font-face {
   font-family: "dp";
-  src: url("../svgicons/icon/dp.eot?f0vmyl");
-  src: url("../svgicons/icon/dp.eot?f0vmyl#iefix") format("embedded-opentype"), url("../svgicons/icon/dp.ttf?f0vmyl") format("truetype"), url("../svgicons/icon/dp.woff?f0vmyl") format("woff"), url("../svgicons/icon/dp.svg?f0vmyl#dp") format("svg");
+  src: url("../fonts/dp.eot?f0vmyl");
+  src: url("../fonts/dp.eot?f0vmyl#iefix") format("embedded-opentype"), url("../fonts/dp.ttf?f0vmyl") format("truetype"), url("../fonts/dp.woff?f0vmyl") format("woff"), url("../fonts/dp.svg?f0vmyl#dp") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -92,7 +92,7 @@ section {
 }
 
 html {
-  font-size: 16px;
+  font-size: 10px;
 }
 
 html,
@@ -103,7 +103,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -112,7 +112,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -166,17 +166,17 @@ h6 {
 }
 */
 body {
-  color: red;
+  color: #fff;
 }
 body._lock {
   overflow: hidden;
 }
 
 ._container {
-  max-width: 1250px;
+  max-width: 1200px;
   margin: 0 auto;
 }
-@media (max-width: 1262px) {
+@media (max-width: 1212px) {
   ._container {
     max-width: 970px;
   }
@@ -190,5 +190,117 @@ body._lock {
   ._container {
     max-width: none;
     padding: 0 10px;
+  }
+}
+
+._btn {
+  padding: 1.9rem 4.6rem;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 178%;
+  color: #100C46;
+  text-transform: capitalize;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+}
+._btn:hover {
+  transform: scale(1.02);
+}
+
+main {
+  min-height: 100vh;
+}
+
+.fullscreen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero__section {
+  background-color: #6257FE;
+  background-image: url("../img/hero__img.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 55% 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hero__section .social__links {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  align-self: start;
+}
+.hero__section .social__links .social__list {
+  background-color: #6257FE;
+  padding: 2.3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hero__section .social__links .social__list li {
+  margin-right: 2.5rem;
+}
+.hero__section .social__links .social__list li:last-child {
+  margin-right: 0;
+}
+.hero__section .social__links .social__list .social__link {
+  font-size: 2.3rem;
+  transition: all 0.5s ease-in;
+}
+
+.hero__container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+.hero__container .hero__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+}
+.hero__container .hero__title {
+  font-family: "Overpass", sans-serif;
+  font-size: 5.6rem;
+  line-height: 126%;
+  font-weight: 700;
+}
+.hero__container .hero__description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  margin: 3rem 0;
+}
+.hero__container .hero__btn {
+  margin-top: 3.7rem;
+}
+
+@media (min-width: 2000px) {
+  ._container {
+    max-width: 1700px;
+  }
+}
+@media (max-width: 992px) {
+  .fullscreen {
+    min-height: auto;
+  }
+
+  .hero__section {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero__container {
+    background-color: rgba(98, 87, 254, 0.9);
+    align-self: center;
+    padding: 1.6rem 1rem;
+    margin: 7rem auto;
+  }
+}
+@media (max-width: 763px) {
+  .hero__container {
+    margin: 7rem 1.5rem;
   }
 }
