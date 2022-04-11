@@ -9,6 +9,7 @@
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
   border-radius: .3rem;
   transition: all 0.3s ease;
+  appearance: none;
     &:hover {
       transform: scale(1.02);
     }
