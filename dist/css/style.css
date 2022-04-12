@@ -173,10 +173,10 @@ body._lock {
 }
 
 ._container {
-  max-width: 1200px;
+  max-width: 1285px;
   margin: 0 auto;
 }
-@media (max-width: 1212px) {
+@media (max-width: 1297px) {
   ._container {
     max-width: 970px;
   }
@@ -327,7 +327,6 @@ main {
   color: #100C46;
   background: linear-gradient(to right, #fff 60%, #6257FE 60%);
   align-items: center;
-  padding: 10rem 0;
 }
 
 .services__container {
@@ -403,6 +402,45 @@ main {
   width: 50%;
 }
 
+.portfolio__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio__container {
+  width: 100%;
+}
+.portfolio__container .portfolio__subtitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 137%;
+  color: #6257FE;
+  text-align: center;
+}
+.portfolio__container .portfolio__title {
+  font-family: "Overpass", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5.6rem;
+  line-height: 126%;
+  color: #100C46;
+  text-align: center;
+}
+.portfolio__container .portfolio__images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.portfolio__container .portfolio__images .images__item {
+  width: 23%;
+}
+.portfolio__container .portfolio__images .images__item .item__img {
+  width: 100%;
+}
+
 @media (min-width: 2000px) {
   html {
     font-size: 12px;
@@ -457,6 +495,19 @@ main {
   }
   .services__container .services__image {
     width: 100%;
+  }
+
+  .portfolio__section {
+    padding: 5rem 0;
+  }
+
+  .portfolio__container .portfolio__images {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .portfolio__container .portfolio__images .images__item {
+    width: 47%;
   }
 }
 @media (max-width: 763px) {

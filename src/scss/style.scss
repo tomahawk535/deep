@@ -26,7 +26,7 @@ $fontSize: 10;
 //<ПЕРЕМЕННЫЕ>==========================================================================================================
 $minWidth: 320px;
 $maxWidth: 1440;
-$maxWidthContainer: 1200;
+$maxWidthContainer: 1285;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -207,7 +207,7 @@ main {
   color: #100C46;
   background: linear-gradient(to right, #fff 60%, #6257FE 60%);
   align-items: center;
-  padding: 10rem 0;
+  //padding: 10rem 0;
 }
 .services__container {
   display: flex;
@@ -282,6 +282,43 @@ main {
     }
   }
 }
+.portfolio__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio__container {
+  width: 100%;
+  .portfolio__subtitle {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 137%;
+    color: #6257FE;
+    text-align: center;
+  }
+  .portfolio__title {
+    font-family: 'Overpass', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 126%;
+    color: #100C46;
+    text-align: center;
+  }
+  .portfolio__images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    .images__item {
+      width: 23%;
+      .item__img {
+        width: 100%;
+      }
+    }
+  }
+}
 
 //======= media ======================
 @media (min-width: 2000px) {
@@ -306,14 +343,12 @@ main {
     padding: 1.6rem 1rem;
     margin: 7rem auto;
   }
-
   .about__section {
     background: linear-gradient(to bottom, #100C46 60%, #fff 60%);
     padding: 5rem 0;
   }
   .about__container {
     flex-direction: column;
-
     .about__text {
       width: 100%;
       padding-bottom: 4rem;
@@ -335,7 +370,21 @@ main {
       width: 100%;
     }
   }
+  .portfolio__section {
+    padding: 5rem 0;
+  }
+  .portfolio__container {
+    .portfolio__images {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      .images__item {
+        width: 47%;
+      }
+    }
+  }
 }
+
 
 @media (max-width: 763px) {
   .hero__container {
