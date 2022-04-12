@@ -320,6 +320,88 @@ main {
   }
 }
 
+.team__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.team__container {
+  width: 100%;
+  .team__subtitle {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 137%;
+    color: #6257FE;
+    text-align: center;
+  }
+  .team__title {
+    font-family: 'Overpass', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 126%;
+    color: #100C46;
+    text-align: center;
+  }
+  .team__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    .team__item {
+      width: 24%;
+      &:hover .team__description {
+        opacity: 1;
+      }
+      .item__img {
+        width: 100%;
+      }
+      position: relative;
+      .team__description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(98, 87, 254, 0.8);
+        display: flex;
+        padding: 1.1rem 1.2rem;
+        opacity: 0;
+        transition: opacity 0.4s ease-in;
+        .team__info {
+          width: 70%;
+          justify-content: left;
+          flex-direction: column;
+          .item__name {
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 200%;
+          }
+          .item__description {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 220%;
+          }
+        }
+        .item__social_list {
+          display: flex;
+          align-self: stretch;
+          align-items: center;
+          justify-content: space-around;
+          flex: 1 1 auto;
+
+          .social__links:before {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+ ._touch .team__container .team__group .team__item .team__description {
+   opacity: 1;
+ }
+
 //======= media ======================
 @media (min-width: 2000px) {
   html {
@@ -383,8 +465,20 @@ main {
       }
     }
   }
+  .team__section {
+    padding: 5rem 0;
+  }
+  .team__container {
+    .team__group {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      .team__item {
+        width: 47%;
+      }
+    }
+  }
 }
-
 
 @media (max-width: 763px) {
   .hero__container {
@@ -422,6 +516,22 @@ main {
          }
        }
      }
+    }
+  }
+  .team__container {
+    .team__group {
+      .team__item {
+        .team__description {
+          flex-direction: column;
+          .team__info {
+            width: 100%;
+            padding-bottom: 1.2rem;
+            .item__name {
+              line-height: 135%;
+            }
+          }
+        }
+      }
     }
   }
 }
