@@ -251,9 +251,11 @@ footer .footer__container .footer__btn {
   position: absolute;
   border-radius: 3px;
   right: 1.5rem;
+  transition: all 0.3s ease-in;
 }
 footer .footer__container .footer__btn:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 footer .footer__container .footer__btn:before, footer .footer__container .footer__btn:after {
   content: "";

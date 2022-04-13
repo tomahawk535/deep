@@ -32,3 +32,15 @@ if (isIE()) {
 if (isMobile.any()) {
 	document.querySelector('html').classList.add('_touch');
 }
+
+
+// Прокрутка вверх
+const upBtn = document.querySelector('.up__btn');
+upBtn.addEventListener("click", backToTop);
+
+	function backToTop(e) {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+}

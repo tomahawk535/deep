@@ -23,8 +23,10 @@ footer {
       position: absolute;
       border-radius: 3px;
       right: 1.5rem;
+      transition: all 0.3s ease-in;
       &:hover {
         cursor: pointer;
+        transform: scale(1.1);
       }
 
       &:before, &:after {
