@@ -86,7 +86,7 @@ body {
 //@import "pagging";
 //@import "popup";
 //@import "header";
-//@import "footer";
+@import "footer";
 //@import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
@@ -446,20 +446,8 @@ main {
     align-items: center;
     .location__info {
       width: 70%;
-      background-color: red;
-      height: 70vh;
+      height: 80%;
       position: relative;
-      //&:before {
-      //  content: '';
-      //  position: absolute;
-      //  top: 0;
-      //  left: 0;
-      //  right: 0;
-      //  bottom: 0;
-      //  background-color: rgba(0, 0, 139, 0.5);
-      //  //z-index: 1;
-      //  display: block;
-      //}
       iframe {
         width: 100%;
         height: 100%;
@@ -470,8 +458,6 @@ main {
       flex: 1 1 auto;
       flex-direction: column;
       justify-content: center;
-      //align-items: center;
-
       .details__item {
         padding: 1.5rem;
         margin-left: 10%;
