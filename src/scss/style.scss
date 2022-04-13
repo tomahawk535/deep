@@ -107,7 +107,6 @@ main {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 55% 100%;
-  //align-items: center;
   display: flex;
   flex-wrap: wrap;
   .social__links {
@@ -115,12 +114,14 @@ main {
     justify-content: end;
     width: 100%;
     align-self: start;
+    z-index: 1;
     .social__list {
       background-color: #6257FE;
       padding: 2.3rem;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      margin-left: auto;
       li {
         margin-right: 2.5rem;
         &:last-child {
@@ -499,12 +500,23 @@ main {
   .hero__section {
     background-size: cover;
     background-position: center center;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0, 0.2);
+
+    }
   }
   .hero__container {
-    background-color: rgba(98,87,254, 0.9);
     align-self: center;
     padding: 1.6rem 1rem;
     margin: 7rem auto;
+    z-index: 1;
   }
   .about__section {
     background: linear-gradient(to bottom, #100C46 60%, #fff 60%);

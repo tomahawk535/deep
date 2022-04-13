@@ -302,6 +302,7 @@ main {
   justify-content: end;
   width: 100%;
   align-self: start;
+  z-index: 1;
 }
 .hero__section .social__links .social__list {
   background-color: #6257FE;
@@ -309,6 +310,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-left: auto;
 }
 .hero__section .social__links .social__list li {
   margin-right: 2.5rem;
@@ -688,13 +690,23 @@ main {
   .hero__section {
     background-size: cover;
     background-position: center center;
+    position: relative;
+  }
+  .hero__section:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .hero__container {
-    background-color: rgba(98, 87, 254, 0.9);
     align-self: center;
     padding: 1.6rem 1rem;
     margin: 7rem auto;
+    z-index: 1;
   }
 
   .about__section {
