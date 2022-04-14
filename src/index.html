@@ -158,24 +158,24 @@
 			<section class="contact__section fullscreen">
 				<div class="contact__container _container">
 					<div class="contact__form">
-						<form action="#" method="get" class="form">
+						<form action="#" method="get" class="form" id="form">
 							<p class="form__subtitle">Keep in touch</p>
 							<h3 class="form__title">Contact us</h3>
 							<div class="form__item">
 								<label for="form__name" class="form__label"></label>
-								<input type="text" class="form__input" name="name" placeholder="name" id="form__name">
+								<input type="text" class="form__input _req" name="name" placeholder="name" id="form__name">
 							</div>
 							<div class="form__item">
 								<label for="form__email" class="form__label"></label>
-								<input type="email" class="form__input" name="email" placeholder="email" id="form__email">
+								<input type="email" class="form__input _email _req" name="email" placeholder="email" id="form__email">
 							</div>
 							<div class="form__item">
 								<label for="form__subject" class="form__label"></label>
-								<input type="text" class="form__subject" name="subject" placeholder="subject" id="form__subject">
+								<input type="text" class="form__input _req" name="subject" placeholder="subject" id="form__subject">
 							</div>
 							<div class="form__item">
 								<label for="form__textarea" class="form__label"></label>
-								<textarea name="main subject" id="form__textarea" cols="30" rows="4" placeholder="subject"></textarea>
+								<textarea class="form__input _req" name="main subject" id="form__textarea" cols="30" rows="4" placeholder="subject"></textarea>
 							</div>
 
 							<input type="submit" class="form__submit _btn" value="Get Started">

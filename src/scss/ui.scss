@@ -26,7 +26,11 @@ input[type="text"], input[type="email"],  textarea {
   margin-top: 1.8rem;
   text-transform: capitalize;
   width: 100%;
+  outline: none;
 }
 textarea {
   resize: none;
+}
+.form__input._error {
+  box-shadow: 0 0 1.5rem red;
 }
