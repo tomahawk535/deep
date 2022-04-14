@@ -210,7 +210,7 @@ body._lock {
   transform: scale(1.03);
 }
 
-input, textarea {
+input[type=text], input[type=email], textarea {
   background-color: #F4F3FF;
   border-radius: 0.3rem;
   color: #100C46;
@@ -220,6 +220,7 @@ input, textarea {
   line-height: 138%;
   margin-top: 1.8rem;
   text-transform: capitalize;
+  width: 100%;
 }
 
 textarea {
@@ -629,6 +630,7 @@ main {
   color: #fff;
   background: #6257FE;
   box-shadow: 0 10px 30px rgba(98, 87, 254, 0.3);
+  margin-top: 1.8rem;
 }
 .contact__container .contact__info {
   width: 60%;
@@ -830,5 +832,9 @@ main {
   }
   .team__container .team__group .team__item .team__description .team__info .item__name {
     line-height: 135%;
+  }
+
+  .contact__container .contact__form .form {
+    width: 100%;
   }
 }

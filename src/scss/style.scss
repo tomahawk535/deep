@@ -437,6 +437,7 @@ main {
         color: #fff;
         background: #6257FE;
         box-shadow: 0 10px 30px rgba(98, 87, 254, 0.3);
+        margin-top: 1.8rem;
       }
     }
   }
@@ -644,6 +645,13 @@ main {
             }
           }
         }
+      }
+    }
+  }
+  .contact__container {
+    .contact__form {
+      .form {
+        width: 100%;
       }
     }
   }
